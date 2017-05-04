@@ -1,0 +1,18 @@
+package TestPackage;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.remote.DesiredCapabilities;
+
+public class TestClass1 {
+
+	public static void main(String[] args) {
+		System.setProperty("webdriver.gecko.driver", "C:\\Users\\A User Name\\Desktop\\WORKWORK\\ENVIRO\\geckodriver.exe");
+		WebDriver driver = new FirefoxDriver();
+		DesiredCapabilities capabilities = DesiredCapabilities.firefox();
+		capabilities.setCapability("marionette", true);
+		driver.get("http://www.toolsqa.com");
+
+	}
+
+}
