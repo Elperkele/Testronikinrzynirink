@@ -1,5 +1,7 @@
 package TestPackage;
 
+import java.util.concurrent.TimeUnit;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
@@ -11,8 +13,9 @@ public class TestClass1 {
 		WebDriver driver = new FirefoxDriver();
 		DesiredCapabilities capabilities = DesiredCapabilities.firefox();
 		capabilities.setCapability("marionette", true);
+		driver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
 		driver.get("http://www.toolsqa.com");
-
+        driver.quit();
 	}
 
 }
